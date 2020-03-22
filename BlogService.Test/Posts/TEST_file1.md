@@ -1,5 +1,5 @@
 @author=Jared McCannon
-@title=test blog
+@title=Test 1
 @end
 
 Test content
