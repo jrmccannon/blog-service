@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService.Test/BlogService.Test.csproj": {}
+  },
+  "projects": {
+    "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService.Test/BlogService.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService.Test/BlogService.Test.csproj",
+        "projectName": "BlogService.Test",
+        "projectPath": "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService.Test/BlogService.Test.csproj",
+        "packagesPath": "/home/jared/.nuget/packages/",
+        "outputPath": "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService.Test/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/jared/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService/BlogService.csproj": {
+                "projectPath": "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService/BlogService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.4.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.15.1, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService/BlogService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService/BlogService.csproj",
+        "projectName": "BlogService",
+        "projectPath": "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService/BlogService.csproj",
+        "packagesPath": "/home/jared/.nuget/packages/",
+        "outputPath": "/home/jared/RiderProjects/PersonalServices/BlogService/BlogService/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/jared/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
