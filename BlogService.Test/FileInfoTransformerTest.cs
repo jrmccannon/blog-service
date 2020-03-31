@@ -15,6 +15,8 @@ namespace BlogService.Test
         public void Transform_GivenFileInfo_ReturnsPopulatedBlogPost()
         {
             var postDate = new DateTime(2020, 1, 1, 7, 0, 0);
+            var testContent = "Test content";
+            
             var fileInfo = new DirectoryInfo(PostsDirectory).GetFiles("TEST_file1.md").First();
             
             var blogPost = new FileInfoTransformer().TransformToBlogPost(fileInfo);
@@ -22,6 +24,20 @@ namespace BlogService.Test
             blogPost.AuthorName.Should().Be("Jared McCannon");
             blogPost.Title.Should().Be("Test 1");
             blogPost.PostDate.Should().Be(postDate);
+            blogPost.Body.Should().Be(testContent);
+        }
+        
+        [Test]
+        public void Transform_GivenFileInfo_ReturnsPopulatedBlogPostWithMultipleLines()
+        {
+            var postDate = new DateTime(2020, 1, 1, 7, 0, 0);
+            var testContent = "Test content";
+            
+            var fileInfo = new DirectoryInfo(PostsDirectory).GetFiles("TEST_file2.md").First();
+            
+            var blogPost = new FileInfoTransformer().TransformToBlogPost(fileInfo);
+
+            blogPost.Body.Should().Be(testContent);
         }
     }
 }
