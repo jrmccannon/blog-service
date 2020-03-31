@@ -20,9 +20,9 @@ namespace BlogService
                         result.AuthorName = GetAuthorName(line);
                     }
                     
-                    if (String.IsNullOrEmpty(result.Body))
+                    if (String.IsNullOrEmpty(result.Title))
                     {
-                        result.Body = GetTitle(line);
+                        result.Title = GetTitle(line);
                     }
                 }
             }
