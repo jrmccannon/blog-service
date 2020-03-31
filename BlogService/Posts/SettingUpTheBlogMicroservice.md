@@ -24,4 +24,9 @@ posts. So we'll create a directory with test posts in there
 so we'll always be able to test. We'll denote this by
 prepending `TEST` to each file.
 
+## Building the First Test
+First let's build the file parsing since that's the main mechanism for 
+returning our blog posts.  We'll want to get the metadata out of each file. 
+For the time being, that will be stored on the top of the file.
+
 ## Get Recent Posts

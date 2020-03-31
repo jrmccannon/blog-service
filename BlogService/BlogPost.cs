@@ -6,7 +6,7 @@ namespace BlogService
     {
         public string AuthorName { get; set; }
         public string Title { get; set; }
-        public DateTime Posted { get; set; }
+        public DateTime PostDate { get; set; }
         public string Body { get; set; }
     }
 }

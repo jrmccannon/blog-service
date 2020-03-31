@@ -24,6 +24,11 @@ namespace BlogService
                     {
                         result.Title = GetTitle(line);
                     }
+
+                    if (result.PostDate == DateTime.MinValue)
+                    {
+                        result.PostDate = GetPostDate(line);
+                    }
                 }
             }
 
@@ -43,6 +48,18 @@ namespace BlogService
         private string ParseField(string fieldName, string line)
         {
             return line.StartsWith($"@{fieldName}") ? line.Substring(line.IndexOf('=')+1) : string.Empty;
+        }
+
+        private DateTime GetPostDate(string line)
+        {
+            var value = ParseField("post-date", line);
+            
+            if (DateTime.TryParse(value, out DateTime date))
+            {
+                return date;
+            }
+
+            return DateTime.MinValue;
         }
     }
 }
