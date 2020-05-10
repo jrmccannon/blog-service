@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Linq;
 
 namespace BlogService
 {
@@ -17,15 +16,15 @@ namespace BlogService
 
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (String.IsNullOrEmpty(result.AuthorName))
+                    if (String.IsNullOrEmpty(result.AuthorName) && line.StartsWith("@author"))
                     {
                         result.AuthorName = GetAuthorName(line);
                     }
-                    else if (String.IsNullOrEmpty(result.Title))
+                    else if (String.IsNullOrEmpty(result.Title) && line.StartsWith("@title"))
                     {
                         result.Title = GetTitle(line);
                     }
-                    else if (result.PostDate == DateTime.MinValue)
+                    else if (result.PostDate == DateTime.MinValue && line.StartsWith("@post-date"))
                     {
                         result.PostDate = GetPostDate(line);
                     }
@@ -35,7 +34,7 @@ namespace BlogService
                     }
                     else if (metadataDone)
                     {
-                        result.Body = string.Concat(result.Body, line);
+                        result.Body = string.Concat(result.Body, "\n", line);
                     }
                 }
             }
@@ -62,12 +61,7 @@ namespace BlogService
         {
             var value = ParseField("post-date", line);
 
-            if (DateTime.TryParse(value, out DateTime date))
-            {
-                return date;
-            }
-
-            return DateTime.MinValue;
+            return DateTime.TryParse(value, out DateTime date) ? date : DateTime.MinValue;
         }
     }
 }

@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Linq;
-using System.Linq.Expressions;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -15,7 +14,7 @@ namespace BlogService.Test
         public void Transform_GivenFileInfo_ReturnsPopulatedBlogPost()
         {
             var postDate = new DateTime(2020, 1, 1, 7, 0, 0);
-            var testContent = "Test content";
+            var testContent = "\n\nTest content";
             
             var fileInfo = new DirectoryInfo(PostsDirectory).GetFiles("TEST_file1.md").First();
             
@@ -30,8 +29,7 @@ namespace BlogService.Test
         [Test]
         public void Transform_GivenFileInfo_ReturnsPopulatedBlogPostWithMultipleLines()
         {
-            var postDate = new DateTime(2020, 1, 1, 7, 0, 0);
-            var testContent = "Test content";
+            var testContent = "\n\nTest content\n\nMore content\n\nEven more content";
             
             var fileInfo = new DirectoryInfo(PostsDirectory).GetFiles("TEST_file2.md").First();
             
